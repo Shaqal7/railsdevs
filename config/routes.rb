@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       mount Sidekiq::Web => '/sidekiq'
     end
 
+  mount SimpleDiscussion::Engine => "/forum"
 
   devise_for :users
   root to: 'home#index'
